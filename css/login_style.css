@@ -1,0 +1,75 @@
+body {
+    --body-scale-size: 1;
+}
+
+.container {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:
+        linear-gradient(#0000007F, #0000007F),
+        url('../assets/img/login_bg.png') no-repeat center center;
+    background-size: cover;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 5px;
+    background: linear-gradient(0deg, #162133 0%, #2c4266 0%, #375380 100%);
+    padding: calc(var(--body-scale-size)*1.5rem);
+    box-shadow: 0 0 15px 5px #FFFFFF7F;
+}
+
+label {
+    font-size: calc(var(--body-scale-size)*1.5rem);
+    color: #ffff;
+    font-weight: bold;
+    margin-bottom: calc(var(--body-scale-size)*0.2rem);
+}
+
+.input-text {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: calc(var(--body-scale-size)*0.8rem);
+    padding: calc(var(--body-scale-size)*0.5rem);
+}
+
+.submit {
+    box-sizing: border-box;
+    font-size: calc(var(--body-scale-size)*1rem);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: calc(var(--body-scale-size)*1rem);
+    background-color: #ffff;
+    outline: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.submit:hover {
+    color: #ffff;
+    background-color: #e6c400;
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        --body-scale-size: 0.9;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        --body-scale-size: 0.7;
+    }
+}

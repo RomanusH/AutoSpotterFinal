@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/search_car_style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer_style.css">
+    <script src="https://kit.fontawesome.com/607a7a831b.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <img src="../assets/img/logo_nobg.png" alt="Logo">
+                <span>AutoSpotter</span>
+            </div>
+            <div class="navbar-navigation">
+                <ul class="navbar-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./add_car.html">Add Car</a></li>
+                </ul>
+                <div class="navbar-account">
+                    <a href="./login.html"><i class="fa-solid fa-id-card"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section1">
+            <h2>Qucik search</h2>
+            <form>
+                <div>
+                    <label for="make">Make:</label>
+                    <select id="make" name="make" onchange="getModels()">
+                        <option value="" disabled selected>Select Make</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="model">Model:</label>
+                    <select id="model" name="model" onchange="getYears()" disabled>
+                        <option value="" disabled selected>Select Model</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="year">Year:</label>
+                    <select id="year" name="year" onchange="enableSearchButton()" disabled>
+                        <option value="" disabled selected>Select Year</option>
+                    </select>
+                </div>
+                <button type="button" onclick="showCar()" id="showButton" disabled>Show</button>
+            </form>
+        </section>
+
+        <div class="search-section">
+            <input type="text" id="searchInput" placeholder="Search cars...">
+            <div id="suggestions" class="suggestions"></div>
+        </div>
+
+        <section class="section2">
+            <h2>Advanced search</h2>
+            <form>
+                <div>
+                    <label for="body_type">Body Type:</label>
+                    <select id="body_type" name="body_type">
+                        <option value="" disabled selected>Select</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="engine_size">Engine Size:</label>
+                    <select id="engine_size" name="engine_size">
+                        <option value="" disabled selected>Select</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="fuel_type">Fuel Type:</label>
+                    <select id="fuel_type" name="fuel_type">
+                        <option value="" disabled selected>Select</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="transmission">Transmission:</label>
+                    <select id="transmission" name="transmission">
+                        <option value="" disabled selected>Select</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="fuel_efficiency">Fuel Efficiency:</label>
+                    <select id="fuel_efficiency" name="fuel_efficiency">
+                        <option value="" disabled selected>Select</option>
+                    </select>
+                </div>
+                <button type="button" id="resetFiltersButton">Reset Filters</button>
+                <button type="button" id="advancedSearchButton">Advanced Search</button>
+            </form>
+        </section>
+
+        <section id="results" class="section3"></section>
+    </main>
+
+    <!-- <footer>
+        <div class="footer-content">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="footer-rights">
+            <span>© 2023 AutoSpotter. All rights reserved.</span>
+        </div>
+    </footer> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../js/search_car.js"></script>
+</body>
+
+</html>

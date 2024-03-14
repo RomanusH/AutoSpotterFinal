@@ -1,0 +1,108 @@
+body {
+    --body-scale-size: 1;
+}
+
+.container {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+main {
+    box-sizing: border-box;
+    height: 100vh;
+    background:
+        linear-gradient(#000000BF, #000000BF),
+        url('../assets/img/about_bg.png') no-repeat center center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.section1 {
+    box-sizing: border-box;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--body-scale-size)*3rem);
+    justify-content: center;
+    text-align: center;
+    padding: 0 calc(var(--body-scale-size)*5rem);
+}
+
+.section1 h2 {
+    font-size: calc(var(--body-scale-size)*2rem);
+    color: white;
+    margin: 0;
+}
+
+.section1 strong {
+    color: #e6c300;
+}
+
+.section1 div {
+    display: flex;
+    justify-content: center;
+    gap: calc(var(--body-scale-size)*7rem);
+}
+
+.section1 span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: calc(var(--body-scale-size)*1.2rem);
+    color: #ffff;
+    font-weight: bold;
+    background: linear-gradient(180deg, #375380 0%, #2c4266 0%, #162133 100%);
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    padding: 0.2em;
+    transition: scale 0.3s ease;
+    cursor: pointer;
+}
+
+.section1 span:nth-child(2) {
+    margin-top: calc(var(--body-scale-size)*5rem);
+}
+
+.section1 span:hover {
+    scale: 1.1;
+}
+
+.section1 p {
+    font-size: calc(var(--body-scale-size)*1.5rem);
+    color: #ffff;
+    font-weight: bolder;
+}
+
+@media only screen and (max-width: 950px) {
+    body {
+        --body-scale-size: 0.8;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        --body-scale-size: 0.6;
+    }
+
+    .section1 div {
+        gap: calc(var(--body-scale-size)*5rem);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    body {
+        --body-scale-size: 0.5;
+    }
+
+    .section1 div {
+        gap: calc(var(--body-scale-size)*3rem);
+    }
+}

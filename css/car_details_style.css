@@ -1,0 +1,47 @@
+main {
+    position: relative;
+    align-items: center;
+    height: 100vh;
+    background:
+        linear-gradient(#0000007F, #0000007F),
+        url('../assets/img/car_details_bg.png') no-repeat center center;
+    background-size: cover;
+}
+
+#carDetailsCard {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    top: 15%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #375380;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+#carImage {
+    width: 12rem;
+}
+
+#carData {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#carData p {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+.detail-key {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #fff;
+}
